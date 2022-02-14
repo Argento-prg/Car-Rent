@@ -25,7 +25,7 @@ export class Validate {
             //попадают ли даты начала и конца бронирования в исключённые дни недели?
             let decision = true;
             excludedBookingDays.forEach((excludedBookingDay) => {
-                if (excludedBookingDay === dateEnd.getDay() || excludedBookingDay === dateStart.getDay()) {
+                if (excludedBookingDay.excluded_booking_days === dateEnd.getDay() || excludedBookingDay.excluded_booking_days === dateStart.getDay()) {
                     decision = false;
                 }
             });
