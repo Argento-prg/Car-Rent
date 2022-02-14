@@ -26,7 +26,7 @@ export class AppService {
     //проверка доступности автомобиля отдельным маршрутом
     async checkAvailability(reqSchemaDto: ReqSchemaDto): Promise<ResAvailabilityDto> {
         const resAvailabilityDto = new ResAvailabilityDto();
-        //на всякий случай приводим полученные даты к типу Date
+        //приводим полученные даты к типу Date
         const dateStart = new Date(reqSchemaDto.date_start);
         const dateEnd = new Date(reqSchemaDto.date_end);
         //также приводим car_id к числу
@@ -55,7 +55,7 @@ export class AppService {
     //получение стоимости автомобиля отдельным маршрутом
     async getPrice(reqSchemaDto: ReqSchemaDto): Promise<ResPriceDto> {
         const resPriceDto = new ResPriceDto();
-        //на всякий случай приводим полученные даты к типу Date
+        //приводим полученные даты к типу Date
         const dateStart = new Date(reqSchemaDto.date_start);
         const dateEnd = new Date(reqSchemaDto.date_end);
         //валидация дат
@@ -76,7 +76,7 @@ export class AppService {
     //создание сессии бронирования автомобиля
     async createSession(reqSchemaDto: ReqSchemaDto): Promise<ResCreateDto> {
         const resCreateDto = new ResCreateDto();
-        //на всякий случай приводим полученные даты к типу Date
+        //приводим полученные даты к типу Date
         const dateStart = new Date(reqSchemaDto.date_start);
         const dateEnd = new Date(reqSchemaDto.date_end);
         //также приводим car_id к числу
